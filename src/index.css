@@ -1,0 +1,973 @@
+/* common */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.backImg{
+    height: 100%;
+    width: 100%;
+}
+.c3{
+    position: absolute;
+    top: calc(100vw * 200 / 1903);
+    right: calc(100vw * 150 / 1903);
+    width: 12vw;
+}
+.c3_church_kelowna, .c3_church_revelstoke{
+    position: absolute;
+    top: calc(100vw * 200 / 1903);
+    right: calc(100vw * 150 / 1903);
+    width: 18vw;
+}
+.c3_vernon_logo{
+    position: absolute;
+    top: calc(100vw * 240 / 1903);
+    right: calc(100vw * 190 / 1903);
+    width: 11vw;
+}
+.c3_church_img{
+    width: 55%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.blurImg{
+    height: calc(100vw * 200 / 1903);
+    width: 100%;
+    position:absolute;
+    bottom:-5px;
+    right:0px;
+}
+.text{
+    padding: 30px 60px;
+    border: 1px solid #aaa;
+}
+.text-head{
+    font-size: 24px;
+    color:#84A4C3;
+}
+.display-none{
+    display: none;
+}
+.textImg{
+    margin: 0;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.position-relative{
+    position: relative;
+}
+.img-wrap {
+    position: relative;
+    display: table;
+    cursor: pointer;
+}
+.img-description{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(61, 66, 69, 0.72);
+    color: #fff;
+    padding: 5px 15px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+.img-wrap:hover .img-description {
+    visibility: visible;
+    opacity: 1;
+}
+.caption{
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: white;
+}
+
+.desc-head{
+    padding-top: 10px;
+    font-size: 20px;
+}
+.desc-content{
+    line-height: 1.3;
+}
+.h-1{
+    height: 230px;
+}
+
+.h-2{
+    height: 476px;
+}
+.podcasts .text-head{
+    margin-left: 100px;
+}
+.tablet-img, .mobile-img, .tablet-mobile-img{
+    display: none;
+}
+@media (min-width: 1200px){
+    .revelstoke .h-1, .kelowna .h-1{
+        height: 300px !important;
+    }
+}
+@media (max-width: 1200px) and (min-width: 991px){
+    .media-head{
+        font-size: 24px !important;
+    }
+}
+@media (max-width: 1024px) and (min-width: 768px){
+    .kelowna-bottom, .revelstoke-bottom, .vernon-bottom{
+        display: block!important;
+    }
+    .tabletImg{
+        display: inline!important;
+    }
+}
+@media (max-width: 991px) and (min-width: 768px){
+    .tablet-img{
+        display: block;
+    }
+    .desktop-mobile-img{
+        display: none;
+    }
+    .social-icon i{
+        font-size: 20px !important;
+    }
+    .vernon-btn-head{
+        font-size: 24px !important;
+    }
+    .vernon-btn-content{
+        font-size: 18px !important;
+    }
+    .media-head{
+        font-size: 18px !important;
+    }
+    .podcasts-player{
+        width: 80%;
+        margin: auto;
+        padding: 20px 20px 5px 20px;
+        border: 5px solid #ddd;
+    }
+    .podcasts-player .media{
+        width: 100% !important;
+    }
+}
+@media (max-width: 767px){
+    .blurImg, .desktop-tablet-img{
+        display: none;
+    }
+    .mobile-img{
+        display: block;
+    }
+    .text{
+        padding: 20px;
+    }
+    .text-parent{
+        margin-top: 50px;
+    }
+    .img-h{
+        height: 30px !important;
+    }
+    .line{
+        height: 20px !important;
+    }
+    .font-20{
+        font-size: 20px !important;
+    }
+    .line-font{
+        font-size: 16px !important;
+    }
+    .vernon-btn{
+        width: 55%;
+    }
+    .vernon-btn-head{
+        font-size: 16px !important;
+    }
+    .vernon-btn-content{
+        font-size: 12px !important;
+    }
+    .HF100{
+        height: 100vh;
+    }
+    .text-collapse{
+        font-size: 14px!important;
+    }
+    .give-desc{
+        font-size: 12px!important;
+    }
+    .give-now{
+        padding: 20px !important;
+    }
+    .contact-phone-envelope{
+        margin-top: 20px;
+        padding-left: 15px !important;
+    }
+    .HF130{
+        height: 130vh;
+    }
+    .profile img{
+        width: 125px;
+    }
+    .profile-kelowna{
+        margin-left: 125px !important;
+        padding-top: 35px !important;
+        padding-bottom: 55px;
+    }
+    .profile-revelstoke{
+        margin-left: 125px !important;
+        padding-top: 10px !important;
+        padding-bottom: 55px;
+    }
+    .social-kelowna{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    .h125{
+        height: 125px;
+    }
+    .h90{
+        height: 90px;
+    }
+    .service-time{
+        width: 100% !important;
+        border: none !important;
+    }
+    .service-direction{
+        width: 100% !important;
+    }
+    .media-head{
+        font-size: 16px !important;
+    }
+    .media-day{
+        font-size: 12px !important;
+    }
+    .podcasts-player{
+        width: 100%;
+        margin: auto;
+        padding: 20px 20px 5px 20px;
+        border: 5px solid #ddd;
+    }
+    .podcasts-player .media{
+        width: 100% !important;
+    }
+    .media-title{
+        font-size: 14px !important;
+    }
+    .media .secondColor{
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 991px){
+    .tablet-mobile-img{
+        display: inline;
+    }
+    .desktop-img{
+        display: none;
+    }
+    .bottom-slider .text-head, .podcasts .text-head, .service .text-head{
+        text-align: center;
+        margin-left: 0 !important;
+    }
+    .give-now{
+        width: 80% !important;
+    }
+    .contact-us{
+        width: 85% !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .media-player,
+    .media{
+        width: 85% !important;
+    }
+}
+
+@media (max-width: 575px) {
+
+}
+.W35{
+    width: 35%;
+}
+.H100{
+    height: calc(100vh - 156px);
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.display-table{
+    display: table;
+}
+/*--------------------*/
+
+/* menu css */
+.menu-content {
+    height: 0;
+    width: 150px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.menu-content ul{
+    list-style: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: rgb(159, 160, 162); /* Fallback for older browsers without RGBA-support */
+    /*background: rgba(159, 160, 162, 0.8);*/
+}
+.menuImg{
+    width: 34px;
+}
+.menu-show{
+    display:block;
+    cursor: pointer;
+}
+.menu-hidden{
+    display:none;
+}
+.closeBtn{
+    margin-bottom: 10px;
+}
+.closeBtn i{
+    cursor: pointer;
+}
+.menu-icon{
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.menu{
+    position: absolute;
+    z-index: 999;
+}
+.mobile-menu-content{
+    height: 0;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    transition: 0.5s;
+    position: fixed;
+    background: black;
+}
+.mobile-menu-content ul {
+    list-style: none;
+    padding: 30px 0;
+}
+.mobile-img .mobile-menu-content li{
+    padding: 10px 0px;
+    color: white;
+    border-top: none;
+    border-bottom: 1px solid;
+}
+.mobile-menu-content .link{
+    color: white;
+}
+.mobile-closeBtn{
+    z-index: 9999;
+    color: white;
+    padding: 20px;
+    position: absolute;
+}
+.mobile-menuImg{
+    width: 60%;
+    margin: auto !important;
+    border: none !important;
+}
+/*--------------------*/
+
+/* home css */
+.bottomImg{
+    position: relative;
+}
+.bottom-text, .c3_church, .media-player{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.media-player{
+    width: 60%;
+    max-width: 900px;
+}
+.media-text{
+    display: table;
+    margin: 0 auto 20px auto;
+}
+.c3_church_other{
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.img-h{
+    height: 50px;
+}
+.line{
+    border-left: 2px solid white;
+    margin-left: 50%;
+    height: 35px;
+    margin-top: 5px;
+}
+.line-font{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+/*--------------------*/
+
+/* slider css */
+.bottom-slider{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    /*background: #f7f7f7;*/
+}
+.slide-head, .map-head{
+    font-weight: bold;
+    color: #666;
+}
+.slide-bottom{
+    border-radius: 7px;
+    background: #84A4C3;
+    color: white;
+    padding: 0 5px;
+}
+/*--------------------*/
+
+/* footer css */
+.footer{
+    padding: 30px 0;
+    background: black;
+    color: white;
+}
+.footer ul{
+    list-style: none;
+    margin: 0px;
+}
+.footer .link{
+    color: white;
+}
+.social-icon-group{
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.social-icon i{
+    font-size: 28px;
+    padding: 0 5px;
+    color: white;
+}
+.desktop-tablet-img .footer-c3{
+    position: absolute;
+    width: calc(100% - 30px);
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.mobile-img li{
+    margin: 0 20px;
+    border-top: 1px solid;
+    padding: 10px;
+}
+.mobile-footer-c3{
+    width: 18%;
+    margin-bottom: 10px;
+}
+/*--------------------*/
+
+
+.btn{
+    margin: 20px auto 5px auto;
+    padding: 10px;
+    background: #84A4C3;
+    color: white;
+    display: table;
+    cursor: pointer;
+}
+
+.social-kelowna i{
+    color: black;
+    font-size: 28px;
+    padding: 0 10px;
+}
+
+.vernon-btn{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.vernon-btn-head{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.vernon-btn-content{
+    border: 1px solid white;
+    background: black;
+    padding: 10px 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+}
+.vernon-btn a:hover {
+    text-decoration: none;
+}
+
+.give-now{
+    padding: 50px;
+    background: white;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    text-align: center;
+    margin: auto;
+    width: 45%;
+    max-width: 650px;
+}
+
+.mainColor{
+    color:#84A4C3;
+}
+
+.secondColor{
+    color:#8C8C8C;
+    padding: 3px 0px;
+}
+
+.give-btn, .contact-btn{
+    background: #84A4C3;
+    color: white;
+    display: table;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.give-desc{
+    color: #B4B4B4;
+    font-size: 14px;
+}
+.give-now i{
+    cursor: pointer;
+}
+
+.text-collapse{
+    color: #B4B4B4;
+}
+
+.contact-us{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: auto;
+    width: 75%;
+    max-width: 850px;
+}
+
+.contact-us input, .contact-us textarea{
+    border: 1px solid #BCE0FD;
+    width: 100%;
+}
+
+.contact-us ::placeholder {
+    color: #BCE0FD;
+}
+
+.ml-45{
+    margin-left: 45px;
+}
+.profile-kelowna{
+    margin-left: 150px;
+    padding-top: 38px;
+    padding-left: 20px;
+}
+.profile-revelstoke{
+    margin-left: 216px;
+    padding-top: 38px;
+    padding-left: 20px;
+}
+.line-height-12{
+    line-height: 1.2;
+}
+
+.phone img{
+    margin-top: 3px;
+}
+
+.envelope img{
+    margin-top: 8px;
+}
+
+.contact-phone-envelope{
+    padding-left: 0;
+}
+
+.map{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+    box-shadow: 3px 2px 15px 0px #aaa;
+    /*border: 1px solid #aaa;*/
+}
+
+.minH450{
+    min-height: 450px;
+}
+
+.media-head {
+    font-size: 30px;
+    color: white;
+}
+
+.media-day {
+    color: white;
+}
+.profile-head{
+    font-weight: bold;
+}
+.social-kelowna{
+    margin-left: auto;
+    display: table;
+    margin-bottom: 30px;
+}
+.media{
+    margin: 0 auto 15px auto;
+    display: table;
+    width: 60%;
+    max-width: 900px;
+}
+
+.media .secondColor{
+    font-size: 14px;
+}
+.service{
+    margin-bottom: 30px;
+}
+.service-time{
+    padding: 30px 40px;
+    width: 40%;
+    border: 1px solid #aaa;
+    border-right: none;
+}
+
+.service-direction{
+    width: 60%;
+    border: 1px solid #aaa;
+    border-left: none;
+}
+
+.clock img, .house img{
+    margin-top: 3px;
+}
+
+/* simple */
+.flip-container {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+
+    -ms-transform: perspective(1000px);
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+
+    border: 1px solid #ccc;
+}
+
+/* START: Accommodating for IE */
+.flip-container:hover .back, .flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.flip-container:hover .front, .flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/* END: Accommodating for IE */
+
+.flip-container, .front, .back {
+    width: 100%;
+}
+
+.flipper {
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 0.6s;
+
+    -moz-transition: 0.6s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg);
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    -moz-transform: rotateY(0deg);
+
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+    -o-transform: rotateY(0deg);
+
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+    -ms-transform: rotateY(0deg);
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    background: lightgreen;
+    z-index: 2;
+}
+
+.back {
+    background: lightblue;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+/* vertical */
+.vertical.flip-container {
+    position: relative;
+}
+
+.vertical .back {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.vertical.flip-container .flipper {
+    -webkit-transform-origin: 100% 213.5px;
+    -moz-transform-origin: 100% 213.5px;
+    -ms-transform-origin: 100% 213.5px;
+    transform-origin: 100% 213.5px;
+}
+
+/* START: Accommodating for IE */
+.vertical.flip-container:hover .back, .vertical.flip-container.hover .back {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+.vertical.flip-container:hover .front, .vertical.flip-container.hover .front {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+#location {
+    position:relative;
+    height:100vh;
+    width:100%;
+    margin:0 auto;
+    min-width: 900px;
+}
+
+#location img {
+    position:absolute;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+/*#location img.Img_kelowna:hover {*/
+    /*opacity:0;*/
+/*}*/
+.social-icon{
+    display: block !important;
+}
+.player .audioplayer:not(.audioplayer-playing) .audioplayer-playpause a{
+    border-left: 12px solid #777;
+}
+
+.player .audioplayer-playing .audioplayer-playpause a::before,
+.player .audioplayer-playing .audioplayer-playpause a::after,
+.player .audioplayer-volume-button a{
+    background-color: #777;
+}
+
+.player .audioplayer-time{
+    color: #777;
+}
+
+.player .audioplayer-volume-button a:before{
+    border-right: 9px solid #777;
+}
+.player .audioplayer:not(.audioplayer-mute) .audioplayer-volume-button a:after{
+    left: 10px;
+    top: -2px;
+    width: 12px;
+    height: 12px;
+    border: 6px double #777;
+    border-width: 6px 6px 0 0;
+    border-radius: 0 12px 0 0;
+    transform: rotate(45deg);
+}
+
+.player .audioplayer-bar::before,
+.player .audioplayer-volume-adjust > div{
+    background-color: #777;
+}
+
+.player .audioplayer-bar-played::after {
+    background-color: #84A4C3;
+}
+
+.player .audioplayer:not(.audioplayer-playing) .audioplayer-bar-played::after,
+.player .audioplayer-playing .audioplayer-bar-played::after{
+    border: 2px solid #84A4C3;
+}
+
+.player .audioplayer-volume-adjust div div:after {
+    background-color: #84A4C3;
+}
+
+.connectGroupCardContent {
+    height: 200px;
+}
+
+@media screen and (max-width: 575px) {
+    .media-player .audioplayer-playpause{
+        position: absolute;
+        left: calc(50% - 10px);
+        top: 102px;
+    }
+    .media-player .audioplayer:not(.audioplayer-playing) .audioplayer-playpause a{
+        border-top: 12px solid transparent !important;
+        border-bottom: 12px solid transparent !important;
+        border-left: 20px solid white !important;
+    }
+    .audioplayer-time-current,
+    .audioplayer-time-duration{
+        margin: unset !important;
+    }
+    .audioplayer-bar{
+        margin: 0 5px;
+    }
+    .media-player .audioplayer-volume{
+        position: absolute;
+        top: 100px;
+        left: 10px;
+    }
+    .media-player .audioplayer-playing .audioplayer-playpause a{
+        width: 16px;
+        height: 20px;
+    }
+    .media-player .audioplayer-playing .audioplayer-playpause a::before,
+    .media-player .audioplayer-playing .audioplayer-playpause a::after{
+        width: 5px;
+        height: 20px;
+    }
+}
+
+.w100{
+    width: 100%;
+}
+@media (min-width: 1024px){
+    
+    .w65{
+        width: 65%;
+    }
+    .w33{
+        width: 33%;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1023px){
+    
+    .w65{
+        width: 100%;
+    }
+    .w33{
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px){
+    .w65{
+        width: 100%;
+    }
+    .w33{
+        width: 100%;
+    }
+}
+
+
